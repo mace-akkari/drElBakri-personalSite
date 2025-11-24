@@ -8,10 +8,10 @@ interface Award {
 
 export function AwardsGrid({ awards }: { awards: Award[] }) {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
       {awards.map((award, index) => (
-        <article key={index}>
-          <Card className="p-6 bg-card border-gold/20 hover:border-gold/40 transition-colors">
+        <article key={index} className="h-full">
+          <Card className="p-6 h-full bg-card border-gold/20 hover:border-gold/40 transition-colors flex flex-col justify-between">
             <div className="text-3xl mb-3" aria-hidden="true">
               {award.icon}
             </div>
