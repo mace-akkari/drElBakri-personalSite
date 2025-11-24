@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-
-export default function SiteHeader() {
+import { ReactNode } from "react";
+export default function SiteHeader({ rightSlot }: { rightSlot?: ReactNode }) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-lg">
       <nav
@@ -38,6 +38,7 @@ export default function SiteHeader() {
               <span className="hidden sm:inline">Strategy Deck</span>
             </Button>
           </Link>
+          {rightSlot && <div>{rightSlot}</div>}
         </div>
       </nav>
     </header>
